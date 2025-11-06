@@ -1,0 +1,21 @@
+{% extends "students/base.html" %}
+
+{% block title %}
+  my school - List of all students
+{% endblock %}
+
+
+{% block content %}
+  <h1>ALLStudents</h1>
+  <table border="1px">
+    <tr>
+      
+    </tr>
+  </table>
+  
+  <ul>
+    {% for student in mystudents %}
+      <li><a href="details/{{ student.id }}">{{ student.firstname }} {{ student.lastname }}  {{student.email}}  {{student.Department}}  {{student.datecreated}}</a></li>
+    {% endfor %}
+  </ul>
+{% endblock %} 
